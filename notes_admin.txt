@@ -1,0 +1,17 @@
+at admin
+npx create-react-app .
+npm install @mui/icons-material
+npm install @mui/material
+npm install recharts (we are also using recharts)
+npm install @emotion/react @emotion/styled-on error
+npm i react-router-dom
+npm i @material-ui/data-grid
+npm i axios @reduxjs/toolkit react-redux redux-persist
+npm i timeago.js
+for table - @mui/x-data-grid need to install 
+we can use box shadow generator
+
+to upload image of a product on create we use firebase
+go to website create a project,install firebase
+create web app , copy that component and export app as in firebase.jxs
+link - https://firebase.google.com/docs/storage/web/upload-files
