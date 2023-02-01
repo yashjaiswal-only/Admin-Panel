@@ -72,7 +72,7 @@ const Error=styled.span`
 const Login = () => {
   const [username,setUsername]=useState('');
   const [password,setPassword]=useState('');
-  const {isFetching ,error} =useSelector(state=>state.user) ;
+  const {isFetching ,error} =useSelector(state=>state.user?state.user:null) ;
   /* get these redux variables from redux named user */
 
   const dispatch =useDispatch();
