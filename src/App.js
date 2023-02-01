@@ -19,7 +19,7 @@ import { useSelector } from "react-redux";
 
 function App() {
   // const user=JSON.parse(JSON.parse(localStorage.getItem('persist:root')).user).currentUser; //get loggedin user (currentUser) from user redux
-  const {currentUser}=useSelector(state=>state.user)
+  const currentUser=useSelector(state=>state.user?state.user.currentUser:null);
   const admin=currentUser?currentUser.isAdmin:null;
  
   return (
