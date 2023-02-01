@@ -3,7 +3,7 @@ import { Badge ,Box,Avatar,Menu,MenuItem,ListItemIcon,Tooltip,Divider,IconButton
 import React from 'react'
 import "./Topbar.css"
 import { logoutSuccess } from '../../redux/UserRedux';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
 export default function Topbar() {
@@ -25,6 +25,7 @@ export default function Topbar() {
           //this navigates to / which renders login component when currentuser is null
      }
 
+     const user=useSelector(state=>state.user?state.user.currentUser:state.user);
 
   return (
     <div className='topbar'>
@@ -59,7 +60,7 @@ export default function Topbar() {
                aria-haspopup="true"
                aria-expanded={open ? 'true' : undefined}
                >
-               <Avatar sx={{ width: 32, height: 32 }}>M</Avatar>
+               <Avatar sx={{ width: 32, height: 32 }} src={user?user.avatar:""}></Avatar>
                </IconButton>
           </Tooltip>
      </Box>
