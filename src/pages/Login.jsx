@@ -59,7 +59,7 @@ const Link=styled.a`
     margin: 10px 0px;
     font-size: 12px;
     text-decoration:underline;
-    cursor:pointer
+    cursor:pointer;
     `
 
 const Box=styled.div`
@@ -72,7 +72,9 @@ const Error=styled.span`
 const Login = () => {
   const [username,setUsername]=useState('');
   const [password,setPassword]=useState('');
-  const {isFetching ,error} =useSelector(state=>state.user?state.user:null) ;
+  
+  const error =useSelector(state=>state.user?state.user.error:null) ; 
+  const isFetching  =useSelector(state=>state.user?state.user.isFetching:null) ; 
   /* get these redux variables from redux named user */
 
   const dispatch =useDispatch();
