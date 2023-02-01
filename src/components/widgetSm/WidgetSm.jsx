@@ -27,7 +27,7 @@ export default function WidgetSm() {
       <span className="widgetSmTitle">New Join Members</span>
       <ul className="widgetSmList">
         {users.length===0 &&  <CircularProgress/> }
-        {users.map(user=>(
+        {users.length && users.map(user=>(
         <li className="widgetSmListItem" key={user._id} >
           <img
             src={user.avatar}
